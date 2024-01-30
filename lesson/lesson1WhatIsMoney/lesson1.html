@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: What is Money?</title>
+    <link rel="stylesheet" href="../lesson.css">
+    <link rel="icon" href="../../icon.jpg">
+
+</head>
+<body>
+    <div class="videoLessonPage">
+        <div class="navBar">
+            <a href="../../home.html">
+                <img class="logo" src="../../images/icon.jpg"/>
+            </a>
+            <a class="navBarButton" href="../../home.html">Home</a>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Lesson</a>
+                <div class="navBarContent">
+                    <a href="../lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                    <a href="../lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                    <a href="../lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                    <a href="../lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                    <a href="../lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Quiz</a>
+                <div class="navBarContent">
+                    <a href="../../quiz/quiz1/quiz1.html">Quiz 1</a>
+                    <a href="../../quiz/quiz2/quiz2.html">Quiz 2</a>
+                    <a href="../../quiz/quiz3/quiz3.html">Quiz 3</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Game</a>
+                <div class="navBarContent">
+                    <a href="../../game/game1/game1.html">Game 1</a>
+                    <a href="../../game/game2/game2.html">Game 2</a>
+                </div>
+            </div>
+            <a class="navBarButton" href="../../aboutUs/aboutUs.html">About us</a>
+            <img onclick=showSideBar() class="hamburger" src="../../images/hamburger.png"/>
+            <div class="sideBar">
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/icon.jpg"/>
+                </a>
+                <a class="sideBarButton" href="../../home.html">Home</a>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Lesson</a>
+                    <div class="navBarContent">
+                        <a href="../lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                        <a href="../lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                        <a href="../lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                        <a href="../lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                        <a href="../lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Quiz</a>
+                    <div class="navBarContent">
+                        <a href="../../quiz/quiz1/quiz1.html">Quiz 1</a>
+                        <a href="../../quiz/quiz2/quiz2.html">Quiz 2</a>
+                        <a href="../../quiz/quiz3/quiz3.html">Quiz 3</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Game</a>
+                    <div class="navBarContent">
+                        <a href="../../game/game1/game1.html">Game 1</a>
+                        <a href="../../game/game2/game2.html">Game 2</a>
+                    </div>
+                </div>
+                <a class="sideBarButton" href="../../aboutUs/aboutUs.html">About us</a>
+                <img onclick=hideSideBar() class="cross" src="../../images/cross.png"/>
+            </div>
+        </div>
+        <div class="video">
+                <iframe class="videoPlayer" width="1263" height="656" src="https://www.youtube.com/embed/AjTwcQYgISA" title="Econ Vids for Kids: What is Money?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+                <div class="column">
+                    <div class="columnLeft">
+                        <h1 class="header">Lesson 1: What is Money?</h1>
+                        <div class="description">What is money? We explore how money originates out of a barter system and the five characteristics of money: divisibility, portability, durability, recognizability, and scarcity. </div>
+                    </div>
+                    <div class="columnRight">
+                        <a class="videoCard" href="../lesson2WhatIsALoan/lesson2.html">
+                            <div class="videoButton">
+                                <img class="videoThumbnail" src="../images/whatIsALoan.png">
+                            </div>
+                            <label class="videoName">Lesson 2: What is a Loan?</label>
+                        </a>
+
+                        <a class="videoCard" href="../lesson3DebitAndCredit/lesson3.html">
+                            <div class="videoButton">
+                                <img class="videoThumbnail" src="../images/debitAndCredit.png">
+                            </div>
+                            <label class="videoName">Lesson 3: Debit and Credit is Money?</label>
+                        </a>
+
+                        <a class="videoCard" href="../lesson4MakingABudget/lesson4.html">
+                            <div class="videoButton">
+                                <img class="videoThumbnail" src="../images/makingABudget.png">
+                            </div>
+                            <label class="videoName">Lesson 4: Making a Budget</label>
+                        </a>
+
+                        <a class="videoCard" href="../lesson5CalculatingInterest/lesson5.html">
+                            <div class="videoButton">
+                                <img class="videoThumbnail" src="../images/calculatingInterest.png">
+                            </div>
+                            <label class="videoName">Lesson 5: Calculating Interest</label>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'flex'
+        }
+        function hideSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

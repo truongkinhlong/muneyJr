@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../navBar.css">
+    <link rel="stylesheet" href="aboutUs.css">
+    <link rel="icon" href="../images/icon.jpg">
+
+</head>
+<body>
+    <div class="videoLessonPage">
+        <!-- NAVBAR START -->
+        <div class="navBar">
+            <a href="../home.html">
+                <img class="logo" src="../images/icon.jpg"/>
+            </a>
+            <a class="navBarButton" href="../home.html">Home</a>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Lesson</a>
+                <div class="navBarContent">
+                    <a href="../lesson/lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                    <a href="../lesson/lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                    <a href="../lesson/lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                    <a href="../lesson/lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                    <a href="../lesson/lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Quiz</a>
+                <div class="navBarContent">
+                    <a href="../quiz/quiz1/quiz1.html">Quiz 1</a>
+                    <a href="../quiz/quiz2/quiz2.html">Quiz 2</a>
+                    <a href="../quiz/quiz3/quiz3.html">Quiz 3</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Game</a>
+                <div class="navBarContent">
+                    <a href="../game/game1/game1.html">Game 1</a>
+                    <a href="../game/game2/game2.html">Game 2</a>
+                </div>
+            </div>
+            <a class="navBarButton" href="../aboutUs/aboutUs.html">About us</a>
+            <img onclick=showSideBar() class="hamburger" src="../images/hamburger.png"/>
+            <div class="sideBar">
+                <a href="../home.html">
+                    <img class="logo" src="../images/icon.jpg"/>
+                </a>
+                <a class="sideBarButton" href="../home.html">Home</a>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Lesson</a>
+                    <div class="navBarContent">
+                        <a href="../lesson/lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                        <a href="../lesson/lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                        <a href="../lesson/lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                        <a href="../lesson/lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                        <a href="../lesson/lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Quiz</a>
+                    <div class="navBarContent">
+                        <a href="../quiz/quiz1/quiz1.html">Quiz 1</a>
+                        <a href="../quiz/quiz2/quiz2.html">Quiz 2</a>
+                        <a href="../quiz/quiz3/quiz3.html">Quiz 3</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Game</a>
+                    <div class="navBarContent">
+                        <a href="../game/game1/game1.html">Game 1</a>
+                        <a href="../game/game2/game2.html">Game 2</a>
+                    </div>
+                </div>
+                <a class="sideBarButton" href="../aboutUs/aboutUs.html">About us</a>
+                <img onclick=hideSideBar() class="cross" src="../images/cross.png"/>
+            </div>
+        </div>                    
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'flex'
+        }
+        function hideSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'none'
+        }
+    </script>
+    <!-- NAVBAR END -->
+    <div class="body">
+        <div class="header">
+            <div class="logo-container">
+                <img class="logo" src="../images/icon.jpg" alt="Muney Jr. Logo">
+            </div>
+            <h1>About Us - Muney Jr.</h1>
+        </div>
+
+        <section style="background-color: #4b9dea;">
+            <img class="illustration" src="../images/ourStory.png" alt="Illustration 1">
+            <h2>Our Story</h2>
+            <p>Muney Jr. is a magical place where kids learn about money in the most exciting way possible! We invite children like Aryan Gandhi to join us on thrilling adventures that make learning about finance and money management fun and interactive.</p>
+        </section>
+
+        <section style="background-color: #AFDEEA;">
+            <img class="illustration" src="../images/ourMission.png" alt="Illustration 2">
+            <h2>Our Mission</h2>
+            <p>We embark on thrilling missions with kids like Braedon Cratuff to teach young minds about finance and money management, making learning an exciting journey filled with valuable lessons.</p>
+        </section>
+
+        <section style="background-color: #4b9dea;">
+            <img class="illustration" src="../images/ourVision.png" alt="Illustration 3">
+            <h2>Our Vision</h2>
+            <p>Imagine a world where every child, including Aryan and Kinh, has the superpower of financial knowledge. Our vision is to empower them to make smart choices throughout their lives, turning them into superheroes of finance!</p>
+        </section>
+
+        <section class="team-intro"> 
+            <!-- style="background-color: #fefefe; -->
+            <h2 class="teamLable">Meet Our Team</h2>
+            <div class="team-tag">
+                <div class="team-member">
+                    <img class="team-image" src="../images/AryanGandhi.JPG" alt="Money Mover Mike" style="max-width: 100px;">
+                    <h3>Aryan Gandhi</h3>
+                    <p>The master of financial adventures!</p>
+                </div>
+                <div class="team-member">
+                    <img class="team-image" src="../images/KinhTruong.jpg" alt="Money Mover Mike" style="max-width: 100px;">
+                    <h3>Kinh Truong</h3>
+                    <p>Our expert in saving and collecting coins!</p>
+                </div>
+                <div class="team-member">
+                    <img class="team-image" src="../images/BraedenCochran.png" alt="Money Mover Mike" style="max-width: 100px;">
+                    <h3>Braeden Cochran</h3>
+                    <p>Creator of the credit!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

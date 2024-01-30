@@ -1,0 +1,49 @@
+body {
+	background-color: #A4E3F8;
+}
+.homePage {
+	height: 100%;
+	width: 100%;
+	margin-top: 3.5rem;
+}
+
+.branding {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: visible;
+}
+
+.bgImage {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	margin-top: 20rem;
+}
+
+.welcome{
+	font-size: 7rem;
+	color: #FA00FF;
+	text-align: center;
+}
+
+.muney {
+	font-size: 10rem;
+	color: #7CCC3D;
+	text-align: center;
+}
+
+.brandingLogo {
+	height: 25rem;
+	width: 25rem;
+	align-self: flex-start;
+}
+
+@media only screen and (max-width: 950px) {
+	.brandingLogo{
+		align-self: center;
+	}
+}

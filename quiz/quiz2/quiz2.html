@@ -1,0 +1,209 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy Quiz for Kids</title>
+    <link rel="stylesheet" href="../../navBar.css">
+    <link rel="stylesheet" href="quiz2.css">
+    <link rel="icon" href="../../icon.jpg">
+
+</head>
+<body>
+    <div class="videoLessonPage">
+        <!-- NAVBAR START -->
+        <div class="navBar">
+            <a href="../../home.html">
+                <img class="logo" src="../../images/icon.jpg"/>
+            </a>
+            <a class="navBarButton" href="../../home.html">Home</a>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Lesson</a>
+                <div class="navBarContent">
+                    <a href="../../lesson/lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                    <a href="../../lesson/lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                    <a href="../../lesson/lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                    <a href="../../lesson/lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                    <a href="../../lesson/lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Quiz</a>
+                <div class="navBarContent">
+                    <a href="../quiz1/quiz1.html">Quiz 1</a>
+                    <a href="../quiz2/quiz2.html">Quiz 2</a>
+                    <a href="../quiz3/quiz3.html">Quiz 3</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Game</a>
+                <div class="navBarContent">
+                    <a href="../../game/game1/game1.html">Game 1</a>
+                    <a href="../../game/game2/game2.html">Game 2</a>
+                </div>
+            </div>
+            <a class="navBarButton" href="../../aboutUs/aboutUs.html">About us</a>
+            <img onclick=showSideBar() class="hamburger" src="../../images/hamburger.png"/>
+            <div class="sideBar">
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/icon.jpg"/>
+                </a>
+                <a class="sideBarButton" href="../../home.html">Home</a>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Lesson</a>
+                    <div class="navBarContent">
+                        <a href="../../lesson/lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                        <a href="../../lesson/lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                        <a href="../../lesson/lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                        <a href="../../lesson/lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                        <a href="../../lesson/lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Quiz</a>
+                    <div class="navBarContent">
+                        <a href="../quiz1/quiz1.html">Quiz 1</a>
+                        <a href="../quiz2/quiz2.html">Quiz 2</a>
+                        <a href="../quiz3/quiz3.html">Quiz 3</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Game</a>
+                    <div class="navBarContent">
+                        <a href="../../game/game1/game1.html">Game 1</a>
+                        <a href="../../game/game2/game2.html">Game 2</a>
+                    </div>
+                </div>
+                <a class="sideBarButton" href="../../aboutUs/aboutUs.html">About us</a>
+                <img onclick=hideSideBar() class="cross" src="../../images/cross.png"/>
+            </div>
+        </div>                    
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'flex'
+        }
+        function hideSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'none'
+        }
+    </script>
+    <!-- NAVBAR END -->
+    <div class="body">
+        <h2>Financial Literacy Quiz for Kids</h2>
+
+    <div id="quiz-container">
+        <div class="question" id="question1" data-correct="C">
+            <p>1. What is the purpose of a savings account?</p>
+            <ul class="options" id="options1">
+                <li onclick="checkAnswer('question1', 'options1', 'A')">a) Buying toys</li>
+                <li onclick="checkAnswer('question1', 'options1', 'B')">b) Playing games</li>
+                <li onclick="checkAnswer('question1', 'options1', 'C')">c) Saving money</li>
+                <li onclick="checkAnswer('question1', 'options1', 'D')">d) Decorating your room</li>
+            </ul>
+        </div>
+    
+        <div class="question" id="question2" data-correct="A">
+            <p>2. What is the benefit of budgeting?</p>
+            <ul class="options" id="options2">
+                <li onclick="checkAnswer('question2', 'options2', 'A')">a) Helps control spending and saving</li>
+                <li onclick="checkAnswer('question2', 'options2', 'B')">b) Allows you to buy anything you want</li>
+                <li onclick="checkAnswer('question2', 'options2', 'C')">c) Budgets are unnecessary</li>
+                <li onclick="checkAnswer('question2', 'options2', 'D')">d) Budgets only for adults</li>
+            </ul>
+        </div>
+    
+        <div class="question" id="question3" data-correct="B">
+            <p>3. What is interest?</p>
+            <ul class="options" id="options3">
+                <li onclick="checkAnswer('question3', 'options3', 'A')">a) Money you owe</li>
+                <li onclick="checkAnswer('question3', 'options3', 'B')">b) Money paid for the use of borrowed money</li>
+                <li onclick="checkAnswer('question3', 'options3', 'C')">c) A gift from a friend</li>
+                <li onclick="checkAnswer('question3', 'options3', 'D')">d) A type of investment</li>
+            </ul>
+        </div>
+    
+        <div class="question" id="question4" data-correct="B">
+            <p>4. What is compound interest?</p>
+            <ul class="options" id="options4">
+                <li onclick="checkAnswer('question4', 'options4', 'A')">a) Money you get for free</li>
+                <li onclick="checkAnswer('question4', 'options4', 'B')">b) Money you earn on the initial amount and the interest</li>
+                <li onclick="checkAnswer('question4', 'options4', 'C')">c) Money you borrow from a friend</li>
+                <li onclick="checkAnswer('question4', 'options4', 'D')">d) Money you spend on toys</li>
+            </ul>
+        </div>
+    
+        <div class="question" id="question5" data-correct="B">
+            <p>5. How does compound interest differ from simple interest?</p>
+            <ul class="options" id="options5">
+                <li onclick="checkAnswer('question5', 'options5', 'A')">a) Compound interest is more complicated</li>
+                <li onclick="checkAnswer('question5', 'options5', 'B')">b) Compound interest includes interest on the initial amount and the interest earned</li>
+                <li onclick="checkAnswer('question5', 'options5', 'C')">c) Simple interest is more fun</li>
+                <li onclick="checkAnswer('question5', 'options5', 'D')">d) Simple interest only applies to grown-ups</li>
+            </ul>
+        </div>
+    
+        <button onclick="showResults()">Submit Answers</button>
+    </div>
+    
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <p>Results:</p>
+            <p>Correct Answers: <span id="correctAnswersCount">0</span></p>
+            <p>Incorrect Answers: <span id="incorrectAnswersCount">0</span></p>
+            <button class="close-button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    </div>
+    
+    
+    <script>
+        function checkAnswer(questionId, optionsId, correctOption) {
+            const options = document.getElementById(optionsId).getElementsByTagName('li');
+            for (let i = 0; i < options.length; i++) {
+                options[i].classList.remove('selected', 'correct');
+            }
+            event.target.classList.add('selected');
+            sessionStorage.setItem(questionId, event.target.innerText.charAt(0));
+        }
+    
+        function showResults() {
+            const questions = document.getElementsByClassName('question');
+            let correctAnswers = 3;
+    
+            for (let i = 0; i < questions.length; i++) {
+                const questionId = questions[i].id;
+                const correctAnswer = questions[i].getAttribute('data-correct');
+                const userAnswer = sessionStorage.getItem(questionId);
+                const selectedOption = document.querySelector(`#${questionId} .selected`);
+    
+                if (userAnswer === correctAnswer) {
+                    correctAnswers++;
+                    selectedOption.classList.add('correct');
+                }
+            }
+    
+            document.getElementById('correctAnswersCount').innerText = correctAnswers;
+            document.getElementById('incorrectAnswersCount').innerText = questions.length - correctAnswers;
+    
+            // Show modal
+            document.getElementById('resultModal').style.display = 'flex';
+        }
+    
+        function closeModal() {
+            // Close modal
+            document.getElementById('resultModal').style.display = 'none';
+        }
+    
+        // Close modal if the overlay is clicked
+        window.onclick = function(event) {
+            const modal = document.getElementById('resultModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

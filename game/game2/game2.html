@@ -1,0 +1,220 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Tycoon</title>
+    <link rel="stylesheet" href="../../navBar.css">
+    <link rel="stylesheet" href="game2.css">
+    <link rel="icon" href="../../icon.jpg">
+
+</head>
+<body>
+    <div class="videoLessonPage">
+        <!-- NAVBAR START -->
+        <div class="navBar">
+            <a href="../../home.html">
+                <img class="logo" src="../../images/icon.jpg"/>
+            </a>
+            <a class="navBarButton" href="../../home.html">Home</a>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Lesson</a>
+                <div class="navBarContent">
+                    <a href="../../lesson/lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                    <a href="../../lesson/lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                    <a href="../../lesson/lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                    <a href="../../lesson/lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                    <a href="../../lesson/lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Quiz</a>
+                <div class="navBarContent">
+                    <a href="../../quiz/quiz1/quiz1.html">Quiz 1</a>
+                    <a href="../../quiz/quiz2/quiz2.html">Quiz 2</a>
+                    <a href="../../quiz/quiz3/quiz3.html">Quiz 3</a>
+                </div>
+            </div>
+            <div class="navBarButton dropdown">
+                <a class="navBarButton">Game</a>
+                <div class="navBarContent">
+                    <a href="../game1/game1.html">Game 1</a>
+                    <a href="../game2/game2.html">Game 2</a>
+                </div>
+            </div>
+            <a class="navBarButton" href="../../aboutUs/aboutUs.html">About us</a>
+            <img onclick=showSideBar() class="hamburger" src="../../images/hamburger.png"/>
+            <div class="sideBar">
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/icon.jpg"/>
+                </a>
+                <a class="sideBarButton" href="../../home.html">Home</a>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Lesson</a>
+                    <div class="navBarContent">
+                        <a href="../../lesson/lesson1WhatIsMoney/lesson1.html">Lesson 1</a>
+                        <a href="../../lesson/lesson2WhatIsALoan/lesson2.html">Lesson 2</a>
+                        <a href="../../lesson/lesson3DebitAndCredit/lesson3.html">Lesson 3</a>
+                        <a href="../../lesson/lesson4MakingABudget/lesson4.html">Lesson 4</a>
+                        <a href="../../lesson/lesson5CalculatingInterest/lesson5.html">Lesson 5</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Quiz</a>
+                    <div class="navBarContent">
+                        <a href="../../quiz/quiz1/quiz1.html">Quiz 1</a>
+                        <a href="../../quiz/quiz2/quiz2.html">Quiz 2</a>
+                        <a href="../../quiz/quiz3/quiz3.html">Quiz 3</a>
+                    </div>
+                </div>
+                <div class="sideBarButton dropdown">
+                    <a class="sideBarButton">Game</a>
+                    <div class="navBarContent">
+                        <a href="../game1/game1.html">Game 1</a>
+                        <a href="../game2/game2.html">Game 2</a>
+                    </div>
+                </div>
+                <a class="sideBarButton" href="../../aboutUs/aboutUs.html">About us</a>
+                <img onclick=hideSideBar() class="cross" src="../../images/cross.png"/>
+            </div>
+        </div>                    
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'flex'
+        }
+        function hideSideBar() {
+            const sideBar = document.querySelector('.sideBar')
+            sideBar.style.display = 'none'
+        }
+    </script>
+    <!-- NAVBAR END -->
+    <div class="body">
+        <header>
+            <h1>Investment Tycoon</h1>
+            <p>Welcome to the amazing world of investments! Grow your wealth by making smart investment decisions.</p>
+        </header>
+
+        <div id="game-container">
+            <p>Wealth: $<span id="wealth" class="flash">1000</span></p>
+            <button onclick="makeInvestment()">Make Investment</button>
+            <button onclick="quitGame()">Quit</button>
+        </div>
+
+        <div id="stats-container">
+            <p>Total Investments: <span id="total-investments">0</span></p>
+            <p>Average ROI: <span id="average-roi">0%</span></p>
+        </div>
+
+        <div id="graph-container">
+            <!-- Use a chart library (e.g., Chart.js) to create an interactive graph here -->
+        </div>
+
+        <div id="investment-history" class="investment-history">
+            <h2>Investment History</h2>
+            <ul id="investment-list"></ul>
+        </div>
+
+        <div id="achievements" class="achievement">
+            <h2>Achievements</h2>
+            <ul id="achievement-list"></ul>
+        </div>
+    </div>
+    <script>
+        let wealth = 1000;
+        let totalInvestments = 0;
+        let totalReturns = 0;
+        let investmentHistory = [];
+
+        function updateUI() {
+            let wealthElement = document.getElementById("wealth");
+            wealthElement.innerText = wealth.toFixed(2);
+            wealthElement.classList.add("flash");
+
+            setTimeout(() => {
+                wealthElement.classList.remove("flash");
+            }, 500);
+        }
+
+        function updateStats() {
+            document.getElementById("total-investments").innerText = totalInvestments;
+            document.getElementById("average-roi").innerText = totalInvestments === 0 ? '0%' : ((totalReturns / totalInvestments) * 100).toFixed(2) + '%';
+        }
+
+        function updateGraph() {
+            // Implement code to update the graph based on investment history
+        }
+
+        function updateInvestmentHistory(investmentAmount, returns) {
+            investmentHistory.push({ amount: investmentAmount, returns: returns });
+            const investmentList = document.getElementById("investment-list");
+            const newItem = document.createElement("li");
+            newItem.innerText = `Invested $${investmentAmount.toFixed(2)} - Returns: $${returns.toFixed(2)}`;
+            investmentList.appendChild(newItem);
+        }
+
+        function checkAchievements() {
+            if (totalInvestments >= 5) {
+                displayAchievement("Diversified Investor", "Made 5 or more investments.");
+            }
+
+            if (totalReturns >= 5000) {
+                displayAchievement("Wealth Builder", "Earned $5000 or more in returns.");
+            }
+        }
+
+        function displayAchievement(title, description) {
+            const achievementList = document.getElementById("achievement-list");
+            const newItem = document.createElement("li");
+            newItem.innerHTML = `<span class="achievement">${title}:</span> ${description}`;
+            achievementList.appendChild(newItem);
+        }
+
+        function makeInvestment() {
+            let investmentAmount = prompt("Enter the amount to invest:");
+            investmentAmount = parseFloat(investmentAmount);
+
+            if (isNaN(investmentAmount) || investmentAmount <= 0 || investmentAmount > wealth) {
+                alert("Oops! Invalid amount. Enter a valid number.");
+            } else {
+                let growthChance = Math.random();
+                let returns;
+
+                if (growthChance < 0.5) {
+                    returns = Math.random() * (0.2 - 0.05) + 0.05;
+                    wealth += Math.floor(investmentAmount * returns);
+                    alert(`Congratulations! Your investment of $${investmentAmount.toFixed(2)} sprouted and grew like a magic beanstalk! 🌱`);
+                } else {
+                    returns = Math.random() * (0.5 - 0.1) + 0.1;
+                    wealth -= Math.floor(investmentAmount * returns);
+                    alert(`Uh-oh! Your investment of $${investmentAmount.toFixed(2)} turned into a friendly ghost and scared some wealth away! 👻`);
+                }
+
+                totalInvestments++;
+                totalReturns += returns * investmentAmount;
+
+                updateUI();
+                updateStats();
+                updateInvestmentHistory(investmentAmount, returns);
+                checkAchievements();
+                updateGraph();
+                checkGameStatus();
+            }
+        }
+
+        function quitGame() {
+            alert(`Thanks for playing Investment Tycoon!\n\nYour final net worth: $${wealth.toFixed(2)}`);
+            document.getElementById("game-container").style.display = "none";
+        }
+
+        function checkGameStatus() {
+            if (wealth <= 0) {
+                alert("Game Over! Your net worth is negative. Better luck next time!");
+                document.getElementById("game-container").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

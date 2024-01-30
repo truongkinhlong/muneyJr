@@ -1,0 +1,104 @@
+.body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: rgb(238, 243, 245);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 3.5rem;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #AFDEEA;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 200px;
+    max-height: 100px;
+    animation: bounce 1s infinite;
+}
+
+.illustration {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.team-intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.team-tag {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.team-member {
+    width: 20rem;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #7BD3A0;
+    border-radius: 60px;
+    flex-grow: 1;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .team-tag {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

@@ -1,0 +1,239 @@
+*   {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.videoLessonPage {
+    /* dimension */
+    height: 100%;
+    width: 100%;
+    /* position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background color */
+    background: #7BD3EA;
+    /* other */
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+}
+
+/* navBar */
+.navbar {
+    /* dimension */
+    height: 3rem;
+    width: 100%;
+    padding: 1rem;
+    /* background */
+    background-color: #176482;
+    /* position */
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 9999;
+    /* display */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.navBarButton {
+    /* visibility */
+    visibility: visible;
+    /* dimension */
+    margin: 0.5rem 2rem;
+    background-color: #176482;
+    /* typology */
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navBarContent {
+    display: none;
+    background-color: #3BC6EA;
+    position: absolute;
+}
+
+.navBarContent a{
+     /* visibility */
+     visibility: visible;
+     /* dimension */
+     margin: 0.5rem 2rem;
+     /* typology */
+     font-size: 1.5rem;
+     color: #fff;
+     text-decoration: none;
+     cursor: pointer;
+}
+
+.dropdown:hover .navBarContent{
+    display: flex;
+    flex-direction: column;
+}
+.hamburger {
+    /* visibility */
+    visibility: hidden;
+    /* dimension */
+    height: 2rem;
+    width: 2rem;
+    /* position */
+    position: absolute;
+    right: 1rem;
+}
+
+.sideBar {
+    /* dimension */
+    height: 100vh;
+    width: 100vw;
+    /* position */
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* background */
+    background-color: #176482;
+    /* display */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideBarButton {
+    /* dimension */
+    margin: 0.5rem 2rem;
+    /* typology */
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cross {
+    /* position */
+    position: absolute;
+    right: 1rem;
+    /* dimension */
+    height: 2rem;
+    width: 2rem;
+}
+
+
+/* navBarEnd */
+
+/* Video */
+.video {
+     /* display */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 3.5rem;
+}
+
+.videoPlayer {
+    /* dimension */
+    width: 100vw;
+    margin-bottom: 2rem;
+    padding: 0rem 1rem;
+}
+
+.column {
+    /* dimension */
+    width: 100vw;
+    /* display */
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+}
+
+.columnLeft {
+    /* dimension */
+    width: auto;
+}
+
+.header {
+    /* dimension */
+    width: inherit;
+    margin: 0rem 1rem;
+    /* typography */
+    font-size: 2rem;
+    font-weight: bold;
+}
+.description {
+    /* dimention */
+    margin: 0rem 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    /* backround */
+    background-color: #3BC6EA;
+    /* typography */
+    font-size: 1.5rem;
+
+    
+}
+.columnRight {
+    /* dimension */
+    width: 200rem;
+    /*  */
+}
+
+.videoCard {
+    display: flex;
+    flex-direction: row;
+    justify-items: top;
+    text-decoration: none;
+}
+
+.videoButton {
+    /* dimension */
+    height: 7.5rem;
+    width: 12rem;
+    margin: 1rem 1rem;
+    /* background */
+    background-color: inherit;
+    border: none;
+    /* display */
+    display: flex;
+}
+
+.videoThumbnail {
+    /* dimension */
+    height: 7.5rem;
+    width: 12rem;
+}
+
+.videoName {
+    /* dimension */
+    height: 7.5rem;
+    margin: 1rem 0.5rem;
+    /* typography */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+/* responsive */
+@media only screen and (max-width: 950px) {
+    .column {
+        flex-direction: column;
+    }
+    .navBarButton {
+        visibility: hidden;
+    }
+    .hamburger {
+        /* visibility */
+        visibility: visible;
+    }
+}

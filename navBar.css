@@ -1,0 +1,125 @@
+*   {
+    box-sizing: border-box;
+    
+}
+/* navBar */
+.navbar {
+    /* dimension */
+    height: 3rem;
+    width: 100vw;
+    padding: 1rem;
+    /* background */
+    background-color: #176482;
+    /* position */
+    top: 0;
+    left: 0;
+    position:fixed;
+    z-index: 9999;
+    /* display */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.navBarButton {
+    /* visibility */
+    visibility: visible;
+    /* dimension */
+    margin: 0.5rem 2rem;
+    background-color: #176482;
+    /* typology */
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navBarContent {
+    display: none;
+    background-color: #3BC6EA;
+    position: absolute;
+}
+
+.navBarContent a{
+     /* visibility */
+     visibility: visible;
+     /* dimension */
+     margin: 0.5rem 2rem;
+     /* typology */
+     font-size: 1.5rem;
+     color: #fff;
+     text-decoration: none;
+     cursor: pointer;
+}
+
+.dropdown:hover .navBarContent{
+    display: flex;
+    flex-direction: column;
+}
+.hamburger {
+    /* visibility */
+    visibility: hidden;
+    /* dimension */
+    height: 2rem;
+    width: 2rem;
+    /* position */
+    position: absolute;
+    right: 1rem;
+}
+
+.sideBar {
+    /* dimension */
+    height: 100vh;
+    width: 100vw;
+    /* position */
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* background */
+    background-color: #176482;
+    /* display */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideBarButton {
+    /* dimension */
+    margin: 0.5rem 2rem;
+    /* typology */
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cross {
+    /* position */
+    position: absolute;
+    right: 1rem;
+    /* dimension */
+    height: 2rem;
+    width: 2rem;
+}
+
+
+/* navBarEnd */
+
+/* responsive */
+@media only screen and (max-width: 950px) {
+    .column {
+        flex-direction: column;
+    }
+    .navBarButton {
+        visibility: hidden;
+    }
+    .hamburger {
+        /* visibility */
+        visibility: visible;
+    }
+}
